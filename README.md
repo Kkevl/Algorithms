@@ -1,1 +1,3 @@
-# Kevin
+#Read me
+this is my practice for Algorithms class..
+It's really welcome for any comments or forks or any coperation works...
