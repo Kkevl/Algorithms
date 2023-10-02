@@ -26,38 +26,50 @@ void mergesort::printarray(vector<int> &array){
     {
         cout<<"i = "<<i<<"|num: "<<array[i]<<"  ";
     }    
+    cout<<endl;
 }
-void mergesort::sorting(vector<int> &array,int start,int end){
+void mergesort::sorting(vector<int> &array,int start,int end)
+{
     int size = end - start;
-    cout<<"start = "<<start<<"\tend = "<<end<<"\tsize = "<<size;
-    // if(size<0)
+    if (size <= 0){
+        cout<<"size = "<<size<<" size min!\n";
+        return;
+    }    
+    vector<int> leftarray(size/2),rightarray(size/2+1);
+    // for (int i = 0; i < size/2+1; i++)
     // {
-    //     cout<<"start = "<<start<<"\tend = "<<end<<"\tsize = "<<size;
-    //     cout<<"size in to 0!!";
-    //     system("pause");
+    //     leftarray[i] = array[i];
     // }
-    
-    if(size>1){
-        vector<int> leftarray(size/2),rightarray(size/2+1);
-        for (int i = 0; i < size/2+1; i++)
-        {
-            leftarray[i] = array[i];
-        }
-        cout<<"\nleft :";
-        printarray(leftarray);
-        for (int i = size/2; i < size; i++)
-        {
-            rightarray[i - size/2 - 1] = array[i];
-        }
-        cout<<"\nright :";
-        printarray(rightarray);
-
-        cout<<"\nstart left path:\n";
-        sorting(leftarray,start,size/2);
-        cout<<"\nstart right path:\n";
-        sorting(rightarray,size/2,end);
+    // cout<<"start = "<<start<<"\tend = "<<end<<"\tsize = "<<size;
+    // cout<<"\nstart left path:";
+    // printarray(leftarray);
+    // cout<<"finish left array\n";
+    for (int i = size/2; i < size+1; i++)
+    {
+        rightarray[i - size/2] = array[i];
+        cout<<"load num:"<<i<<" | array[i] = "<<array[i]<<endl;
     }
-    // combine(array,size);
+    cout<<"start = "<<start<<"\tend = "<<end<<"\tsize = "<<size;
+    cout<<"\nstart right path:";
+    printarray(rightarray);
+    sorting(rightarray,end-size/2,end);  //end 不會更新
+    cout<<"finish right array\n";
+
+    // sorting(leftarray,start,size/2);
+    // if(size>1){
+    //     cout<<"\nleft :";
+    //     printarray(leftarray);
+    //     for (int i = size/2; i < size; i++)
+    //     {
+    //         rightarray[i - size/2 - 1] = array[i];
+    //     }
+    //     cout<<"\nright :";
+    //     printarray(rightarray);
+    //     cout<<"\nstart left path:\n";
+    //     sorting(leftarray,start,size/2);
+    //     cout<<"\nstart right path:\n";
+    //     sorting(rightarray,size/2,end);
+    // }
     return;
 }
 
