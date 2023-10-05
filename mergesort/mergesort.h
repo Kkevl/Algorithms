@@ -1,5 +1,5 @@
-#ifndef MERGESORT_H
-#define MERGESORT_H
+//#ifndef MERGESORT_H
+//#define MERGESORT_H
 
 #include <iostream>
 #include <vector>
@@ -82,7 +82,7 @@ void mergesort::printresult(vector<int> &array,int size){
     }
     return;
 }
-#endif
+//#endif
 /*#ifndef MERGESORT_H
 #define MERGESORT_H
 

@@ -11,8 +11,8 @@ int main(){
         cout<<randomarray[i]<<" ";
     }
     
-    cout<<"\n";
-    mergesort sorter;    
+    cout << "\n";
+    mergesort sorter;
     sorter.printresult(randomarray,size);
     return 0;
 }

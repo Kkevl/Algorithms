@@ -1,0 +1,5 @@
+﻿  merge.cpp
+D:\coding\cwork\new_start\Algorithms\mergesort_revise\mergesort_revise\merge.cpp(12,23): warning C4018: '<': signed/unsigned mismatch
+  mergesort.cpp
+  Generating Code...
+  mergesort_revise.vcxproj -> D:\coding\cwork\new_start\Algorithms\mergesort_revise\Debug\mergesort_revise.exe
