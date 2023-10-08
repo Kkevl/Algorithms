@@ -3,12 +3,12 @@
 #include<random>
 using namespace std;
 int main() {
-    int size = 5;
-    vector<int> randomarray = { 1,2,3,4,5 };//(size);
+    int size = 8;
+    vector<int> randomarray(size);// = {1,2,5,6,3,4,7,8};//(size);
     cout << "random array: ";
     for (int i = 0; i < size; i++)
     {
-        randomarray[i] = i + 1;//rand() % size;
+        randomarray[i] = (rand()*3+rand()*6) % size;
         cout << randomarray[i] << " ";
     }
     mergesort sorter;
@@ -16,3 +16,7 @@ int main() {
     cout << "\n";
     return 0;
 }
+
+
+
+
