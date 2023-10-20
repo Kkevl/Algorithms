@@ -1,5 +1,2 @@
 ﻿  Quicksort.cpp
-  quicksorter.cpp
-D:\coding\cwork\new_start\Algorithms\Quicksort\Quicksort\quicksorter.cpp(29,20): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
   Quicksort.vcxproj -> D:\coding\cwork\new_start\Algorithms\Quicksort\Debug\Quicksort.exe

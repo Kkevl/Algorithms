@@ -20,7 +20,7 @@ int quicksorter::partion(vector<int>& arrayp, int p, int r)
 			swap<int>(arrayp[++i], arrayp[j]);
 		}
 	}
-	swap<int>(arrayp[++i], arrayp[r - 1]);
+	swap<int>(arrayp[++i], arrayp[r]); //r-1 ->r
 	return i;
 }
 

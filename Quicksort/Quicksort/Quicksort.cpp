@@ -6,17 +6,17 @@
 using namespace std;
 int main()
 {
-    int size = 6;
-    vector<int> testarray = {6,5,4,3,2,1};
+    int size = 7;
+    vector<int> testarray(size);// = { 6,5,4,3,2,1 };
     time_t t = time(0);
-    /*for (int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         testarray[i] = (rand() + i)* t% size + i;
-    }*/
+    }
     quicksorter quick;
     
     quick.printarray(testarray);
-    quick.quicksort(testarray, 1, size - 1);
+    quick.quicksort(testarray, 0, size - 1);
 
     cout << "aftersorting\n";
     quick.printarray(testarray);
