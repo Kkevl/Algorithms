@@ -1,0 +1,6 @@
+﻿  bucketsort.cpp
+D:\coding\cwork\new_start\Algorithms\bucket_sort\bucket_sort\bucketsort.cpp(5,20): warning C4018: '<': signed/unsigned mismatch
+D:\coding\cwork\new_start\Algorithms\bucket_sort\bucket_sort\bucketsort.cpp(30,21): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+D:\coding\cwork\new_start\Algorithms\bucket_sort\bucket_sort\bucketsort.cpp(35,21): warning C4018: '<': signed/unsigned mismatch
+D:\coding\cwork\new_start\Algorithms\bucket_sort\bucket_sort\bucketsort.cpp(50,21): warning C4018: '<': signed/unsigned mismatch
+  bucket_sort.vcxproj -> D:\coding\cwork\new_start\Algorithms\bucket_sort\Debug\bucket_sort.exe
