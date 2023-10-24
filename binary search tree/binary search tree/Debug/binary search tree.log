@@ -1,0 +1,4 @@
+﻿  bst.cpp
+binary search tree.obj : error LNK2019: unresolved external symbol "public: void __thiscall bst<int>::indoortreewalk(class node<int> *)" (?indoortreewalk@?$bst@H@@QAEXPAV?$node@H@@@Z) referenced in function _main
+binary search tree.obj : error LNK2019: unresolved external symbol "public: void __thiscall bst<int>::treeinsert(int)" (?treeinsert@?$bst@H@@QAEXH@Z) referenced in function _main
+D:\coding\cwork\new_start\Algorithms\binary search tree\Debug\binary search tree.exe : fatal error LNK1120: 2 unresolved externals

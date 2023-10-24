@@ -1,2 +1,4 @@
-﻿  heapsort.cpp
+﻿  heapsorter.cpp
+D:\coding\cwork\new_start\Algorithms\heapsort\heapsort\heapsorter.cpp(25,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\coding\cwork\new_start\Algorithms\heapsort\heapsort\heapsorter.cpp(52,20): warning C4018: '<': signed/unsigned mismatch
   heapsort.vcxproj -> D:\coding\cwork\new_start\Algorithms\heapsort\Debug\heapsort.exe

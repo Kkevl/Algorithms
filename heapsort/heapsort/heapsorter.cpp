@@ -1,18 +1,25 @@
 #include "heapsorter.h"
-using namespace std;
-void heapsorter::heapsort(vector<int> array)
+void heapsorter::heapsort(vector<int>& array)
 {
-	int heapsize = array.size();
+	int heapsize = array.size(), tester = 0;
 	buildmaxheap(array);
-	for (int k = array.size()-1; k >= 1; k--)
-	{
-		swap<int>(array[0],array[k]);
-		heapsize--;
-		maxheapify(array, 0, heapsize);//因為只換第一項，所以只switch 第一個
-	}
+
+	cout << "start extracting max: \n";
+	tester = heapextractmax(array);
+	cout << "test : " << tester << endl;
+	
+	//for (int k = array.size()-1; k >= 1; k--)
+	//{
+	//	swap<int>(array[0],array[k]);
+	//	heapsize--;
+	//	maxheapify(array, 0, heapsize);//因為只換第一項，所以只switch 第一個
+	//}
+
+	cout << "end modifying: \n";
 	printarray(array);
 	return;
 }
+
 void heapsorter::buildmaxheap(vector<int>& array)
 {
 	int heapsize = array.size();
@@ -20,11 +27,14 @@ void heapsorter::buildmaxheap(vector<int>& array)
 	{
 		maxheapify(array, j, heapsize);
 	}
+	cout << "after build:\n";
+	printarray(array);
+	cout << "ending\n";
 	return;
 }
 void heapsorter::maxheapify(vector<int>& arraym, int i, int heapsize)
 {
-	int L = i*2+1, R = (i+1)*2, largest;// = i;
+	int L = i*2+1, R = (i+1)*2, largest;
 	//check left
 	if (L < heapsize && arraym[i] < arraym[L])
 		largest = L;
@@ -38,7 +48,7 @@ void heapsorter::maxheapify(vector<int>& arraym, int i, int heapsize)
 	}
 	return;
 }
-void heapsorter::printarray(vector<int> &array)
+void heapsorter::printarray(vector<int>& array)
 {
 	for (int i = 0; i < array.size(); i++)
 	{
@@ -46,4 +56,23 @@ void heapsorter::printarray(vector<int> &array)
 	}
 	cout << endl;
 	return;
+}
+
+int heapsorter::heapextractmax(vector<int>& arraye)
+{
+	if (arraye.size() < 1) {
+		cout << "error! heap under flow!";
+		return -1;
+	}
+	int max = arraye[0];
+	swap<int>(arraye[0], arraye[arraye.size() - 1]);
+	arraye.pop_back();
+	maxheapify(arraye, 0, arraye.size());
+	return max;
+}
+
+void heapsorter::maxheapinsert(vector<int>& arrayi, int key)
+{
+	arrayi.push_back(key);
+	
 }
